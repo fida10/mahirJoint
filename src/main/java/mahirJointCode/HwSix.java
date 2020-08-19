@@ -7,7 +7,8 @@ public class HwSix {
         HwSix hwSix = new HwSix();
         //hwSix.qOneFibonacciSeq();
         //hwSix.qTwoPrintShiftedTriangle(8, 6, '+');
-        //hwSix.qTwoPrintPineTree(17, '*');
+        //hwSix.qTwoPrintPineTree(12, '$');
+        hwSix.qThreeEMathematicalConstant(100);
     }
     public void qOneFibonacciSeq(){
         //denoting the fibonacci series; enter an int n and it will give you the nth term of the series
@@ -54,6 +55,18 @@ public class HwSix {
             }
             System.out.println(aPineTree);
         }
+    }
+    public void qThreeEMathematicalConstant(int n){
+        double eAppx = 1;
+
+        for (int j = 1; j <= n; j++) { //will add up the individual terms to get the estimated 'e' value at n + 1
+            double factorial = 1;
+            for (int i = j; i > 0; i--) { //will calculate an individual term's factorial
+                factorial = factorial * (i);
+            }
+            eAppx += 1 / factorial;
+        }
+        System.out.println(eAppx);
     }
     
 }
